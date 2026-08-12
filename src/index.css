@@ -1,0 +1,18 @@
+/* This file only sets up Tailwind + a couple of true global defaults.
+   Everything else is styled with Tailwind utility classes directly in
+   each component's JSX — there are no custom component CSS classes here
+   on purpose, so all styling for a piece of UI lives right next to it. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Lenis (see hooks/useLenis.jsx) handles smooth scrolling itself */
+    scroll-behavior: auto;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased overflow-x-hidden;
+  }
+}
